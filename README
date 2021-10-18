@@ -5,5 +5,28 @@ Why UNIX tools?
 Because UNIX has a nice philosophy:
     1. Make each program do one thing well.
     2. Make each program use text as data.
-    3. Expect to output to every program to become the input to another.
-And more elegant rules.
+    3. Expect the output to each program to become the input to another.
+And more elegant rules you should read.
+
+Each tool should be usable like the original UNIX one. Only the code should
+differ.
+
+Here are some tools I could recode to train :
+    * The "shell" ones:
+        ** echo
+        ** cat
+        ** mkdir
+        ** cp
+        ** mv
+        ** rm
+        ** rmdir
+        ** ls
+        ** cd
+        ** pwd
+        ** touch
+        ** ... and so on.
+
+        ** A shell-like using the previous listed tools as builtin commands.
+
+
+    * A netcat client and server to train to code with sockets.
