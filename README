@@ -1,0 +1,9 @@
+I sometimes want to train on a new language. This repo offers me the possibility
+to recode UNIX tools in different programming languages.
+
+Why UNIX tools?
+Because UNIX has a nice philosophy:
+    1. Make each program do one thing well.
+    2. Make each program use text as data.
+    3. Expect to output to every program to become the input to another.
+And more elegant rules.
