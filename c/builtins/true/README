@@ -1,0 +1,5 @@
+‘true’ does nothing except return an exit status of 0, meaning “success”. It can
+be used as a place holder in shell scripts where a successful command is needed,
+although the shell built-in command ‘:’ (colon) may do the same thing faster. In
+most modern shells, ‘true’ is a built-in command, so when you use ‘true’ in a
+script, you’re probably using the built-in command.
