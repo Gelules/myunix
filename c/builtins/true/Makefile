@@ -17,4 +17,4 @@ doc:
 	doxygen Doxyfile
 
 clean:
-	$(RM) $(OBJ) $(BIN) $(TARGET)
+	$(RM) $(OBJ) $(BIN) $(TARGET) -r doc/
