@@ -2,3 +2,4 @@ tags
 *.o
 *.so
 *.a
+doc
