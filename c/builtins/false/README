@@ -1,5 +1,12 @@
-‘false’ does nothing except return an exit status of 1, meaning
-“failure”.  It can be used as a place holder in shell scripts where an
-unsuccessful command is needed.  In most modern shells, ‘false’ is a
-built-in command, so when you use ‘false’ in a script, you’re probably
-using the built-in command.
+This is an implementation of the 'false' shell builtin as a binary in C.
+
+Use 'info false' to get more information.
+
+Usage:
+    * make: Compile the binary
+
+    * make check: Launch the testsuite
+
+    * make doc: Generate the documentation in the doc/ directory
+
+    * make clean: Remove the generated files

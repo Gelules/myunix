@@ -1,5 +1,12 @@
-‘true’ does nothing except return an exit status of 0, meaning “success”. It can
-be used as a place holder in shell scripts where a successful command is needed,
-although the shell built-in command ‘:’ (colon) may do the same thing faster. In
-most modern shells, ‘true’ is a built-in command, so when you use ‘true’ in a
-script, you’re probably using the built-in command.
+This is an implementation of the 'true' shell builtin as a binary in C.
+
+Use 'info true' to get more information.
+
+Usage:
+    * make: Compile the binary
+
+    * make check: Launch the testsuite
+
+    * make doc: Generate the documentation in the doc/ directory
+
+    * make clean: Remove the generated files
