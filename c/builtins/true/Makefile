@@ -9,7 +9,7 @@ all: $(BIN)
 $(BIN): $(OBJ)
 
 check:
-	@echo Would you please write the testuite?
+	./tests/testsuite.sh
 
 clean:
 	$(RM) $(OBJ) $(BIN) $(TARGET)
