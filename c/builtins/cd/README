@@ -1,0 +1,12 @@
+This is an implementation of the 'cd' shell builtin as a binary in C.
+
+Use 'info cd' to get more information.
+
+Usage:
+    * make: Compile the binary
+
+    * make check: Launch the testsuite
+
+    * make doc: Generate the documentation in the doc/ directory
+
+    * make clean: Remove the generated files
