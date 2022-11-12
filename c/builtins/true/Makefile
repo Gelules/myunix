@@ -8,7 +8,7 @@ all: $(BIN)
 
 $(BIN): $(OBJ)
 
-check:
+check: all
 	./tests/testsuite.sh
 
 clean:
