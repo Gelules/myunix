@@ -3,3 +3,5 @@ tags
 *.so
 *.a
 doc
+Cargo.lock
+target/
