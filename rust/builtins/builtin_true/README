@@ -1,3 +1,14 @@
 Do nothing, successfully.
 
 Exit with a status code indicating success.
+
+
+To build the target doc:
+cargo doc
+
+firefox ./target/doc/
+
+To build the README.md doc:
+rustdoc README.md
+
+firefox ./doc/
