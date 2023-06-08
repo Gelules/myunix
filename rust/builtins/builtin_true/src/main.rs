@@ -1,6 +1,6 @@
 use std::process::ExitCode;
 
-/// main returns true for the shell
+/// main returns true to the shell
 fn main() -> ExitCode {
     ExitCode::SUCCESS
 }
