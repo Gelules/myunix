@@ -1,5 +1,8 @@
 pub fn fibo(n: u32) -> u32 {
-    n
+    if n < 2 {
+        return n;
+    }
+    return fibo(n - 1) + fibo(n - 2);
 }
 
 #[cfg(test)]
