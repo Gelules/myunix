@@ -1,20 +1,22 @@
 //! Of course the best way to search for an item is to use vec.get() and match the result. This is
 //! just an exercise.
 
+use std::cmp::Ordering;
+
 pub fn binary_search(vec: Vec<i32>, elt: i32) -> i32 {
     let mut left = 0;
     let mut right = vec.len();
     let mut middle;
+    let mut picked;
 
     while left < right {
         middle = left + (right - left) / 2;
+        picked = vec.get(middle);
 
-        if vec[middle] == elt {
-            return middle.try_into().unwrap();
-        } else if vec[middle] < elt {
-            left = middle + 1;
-        } else {
-            right = middle;
+        match picked.cmp(&Some(&elt)) {
+            Ordering::Equal => return middle.try_into().unwrap(),
+            Ordering::Less => left = middle + 1,
+            Ordering::Greater => right = middle,
         }
     }
 
