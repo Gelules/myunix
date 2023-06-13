@@ -2,9 +2,23 @@
 //! just an exercise.
 
 pub fn binary_search(vec: Vec<i32>, elt: i32) -> i32 {
-    println!("{:?}", vec);
-    println!("{elt}");
-    -2
+    let mut left = 0;
+    let mut right = vec.len();
+    let mut middle;
+
+    while left < right {
+        middle = left + (right - left) / 2;
+
+        if vec[middle] == elt {
+            return middle.try_into().unwrap();
+        } else if vec[middle] < elt {
+            left = middle + 1;
+        } else {
+            right = middle;
+        }
+    }
+
+    -1
 }
 
 #[cfg(test)]
