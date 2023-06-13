@@ -24,4 +24,4 @@ rustdoc README.md
 
 ## Testsuite
 
-Execute *cargo test --jobs=1 -- -no-capture* to execute the testsuite.
+Execute *cargo test --jobs=1 -- -no-capture --test-threads=1* to execute the testsuite.
