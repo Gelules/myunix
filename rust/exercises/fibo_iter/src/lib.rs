@@ -1,5 +1,19 @@
 pub fn fibo(n: u32) -> u32 {
-    n
+    let mut n1: u32 = 1;
+    let mut n2: u32 = 1;
+    let mut result: u32 = 1;
+
+    if n == 0 {
+        return 0;
+    }
+
+    for _ in 2..n {
+        result = n1 + n2;
+        n2 = n1;
+        n1 = result;
+    }
+
+    return result;
 }
 
 #[cfg(test)]
