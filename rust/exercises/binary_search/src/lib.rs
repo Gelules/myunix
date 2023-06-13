@@ -1,5 +1,5 @@
-//! Of course the best way to search for an item is to use vec.get() and match the result. This is
-//! just an exercise.
+//! Of course the best way to test the presence of an item in a sorted list is to use
+//! vector.binary_search(&item). This is just an exercise.
 
 use std::cmp::Ordering;
 

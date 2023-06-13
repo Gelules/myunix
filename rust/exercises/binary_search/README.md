@@ -2,11 +2,11 @@
 
 **This is just an exercise**
 
-You should use
+You should use the real
 ```rust
-vector.get(); // with a match
+vector.binary_search(&item);
 ```
-to test presence of an item.
+to test presence of an item in a sorted list.
 
 ## Algorithm
 The array must be sorted.
