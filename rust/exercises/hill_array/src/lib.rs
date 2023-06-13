@@ -1,5 +1,26 @@
-pub fn top_of_the_hill(_hill: &Vec<i32>) -> i32 {
-    -1
+pub fn top_of_the_hill(hill: &Vec<i32>) -> i32 {
+    let mut max = 0;
+    let mut max_index = 0;
+    let mut previous = 0;
+    let mut max_reached = false;
+
+    for i in 0..hill.len() {
+        if hill[i] < 0 || (max_reached && hill[i] > previous) {
+            return -1;
+        }
+
+        if max_reached == false && hill[i] < previous {
+            max_reached = true;
+        }
+
+        if hill[i] > max {
+            max = hill[i];
+            max_index = i;
+        }
+
+        previous = hill[i];
+    }
+    return max_index.try_into().unwrap();
 }
 
 #[cfg(test)]
@@ -75,4 +96,13 @@ mod tests {
         let expected = index_of_max(&hill);
         assert_eq!(result, expected);
     }
+
+    #[test]
+    fn zeroes() {
+        let hill = vec![0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        let result = top_of_the_hill(&hill);
+        let expected = index_of_max(&hill);
+        assert_eq!(result, expected);
+    }
+
 }
