@@ -1,7 +1,17 @@
-pub fn digit(mut n: i32, k: i32) -> u32 {
-    n = n * 1;
-    let result: u32 = (k + n).try_into().unwrap();
-    return result;
+pub fn digit(mut n: i32, mut k: i32) -> u32 {
+    let mut result = 0;
+
+    if n <= 0 || k <= 0 {
+        return 0;
+    }
+
+    while k != 0 {
+        result = n % 10;
+        n /= 10;
+        k -= 1;
+    }
+
+    return result.try_into().unwrap();
 }
 
 #[cfg(test)]
