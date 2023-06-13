@@ -1,5 +1,17 @@
 pub fn bubble_sort(vec: &mut Vec<i32>) {
-    vec[0] = i32::MAX;
+    if vec.len() < 2 {
+        return;
+    }
+
+    for i in 0..(vec.len() - 1){
+        for j in 0..(vec.len() - 1 - i) {
+            if vec[j] > vec[j + 1] {
+                vec[j] ^= vec[j + 1];
+                vec[j + 1] ^= vec[j];
+                vec[j] ^= vec[j + 1];
+            }
+        }
+    }
 }
 
 
