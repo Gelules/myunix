@@ -1,5 +1,9 @@
 pub fn fact(n: u32) -> u32 {
-    n
+    if n < 2 {
+        return 1;
+    }
+
+    return n * fact(n - 1);
 }
 
 #[cfg(test)]
@@ -44,7 +48,7 @@ mod tests {
     #[test]
     fn twelve() {
         let result = fact(12);
-        let expected = 479007600;
+        let expected = 479001600;
         assert_eq!(result, expected);
     }
 }
